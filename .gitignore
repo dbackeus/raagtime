@@ -13,9 +13,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-.env.development*
-.env.test*
 .DS_Store
+
+# dotenv
+.env.development.local
+.env.local
+.env.test.local
 
 # Byebug
 .byebug_history

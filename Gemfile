@@ -1,6 +1,6 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-ruby "2.7.2"
+ruby File.read(".ruby-version").chomp
 
 gem "airbrake"
 gem "bootsnap"
@@ -11,7 +11,8 @@ gem "haml-rails"
 gem "jquery-rails"
 gem "newrelic_rpm"
 gem "pg"
-gem "rails"
+gem "puma"
+gem "rails", "~> 6.1"
 gem "sass-rails"
 gem "sitemap_generator"
 gem "sprockets", "~> 3.7.2"
@@ -31,5 +32,4 @@ end
 
 group :production do
   gem "heroku-deflater"
-  gem "puma"
 end
