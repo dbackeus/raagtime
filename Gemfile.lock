@@ -127,14 +127,14 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.0.2)
-    mini_portile2 (2.7.1)
+    mini_portile2 (2.8.0)
     minitest (5.14.2)
     msgpack (1.3.3)
     net_http_timeout_errors (0.3.5)
     newrelic_rpm (6.13.1)
     nio4r (2.5.8)
-    nokogiri (1.13.1)
-      mini_portile2 (~> 2.7.0)
+    nokogiri (1.13.3)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     oga (3.3)
       ast
