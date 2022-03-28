@@ -12,7 +12,7 @@ gem "jquery-rails"
 gem "newrelic_rpm"
 gem "pg"
 gem "puma"
-gem "rails", "~> 6.1"
+gem "rails"
 gem "sass-rails"
 gem "sitemap_generator"
 gem "sprockets", "~> 3.7.2"
@@ -21,7 +21,6 @@ gem "uglifier"
 gem "video_info"
 
 group :development do
-  gem "listen"
   gem "web-console"
 end
 
