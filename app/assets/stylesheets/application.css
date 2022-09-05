@@ -1,30 +1,15 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- */
-
-@import "reset";
-
-$screen-sm-min: 640px;
-
 /* === General Layout === */
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #222;
+}
 
-  @media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: 640px) {
+  body {
     background: #1a1f00;
-    background-image: image-url('parsley-middle.png'), image-url('parsley-background.png');
+    background-image: url('parsley-middle.png'), url('parsley-background.png');
     background-position: center, left;
     background-repeat: repeat-y, repeat;
   }
@@ -73,8 +58,10 @@ pre {
   padding-left: 15px;
   padding-right: 15px;
   margin: 30px auto;
+}
 
-  @media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: 640px) {
+  .container {
     padding: 30px 55px;
     border-radius: 15px;
   }
@@ -88,76 +75,78 @@ p.suggestion { margin: 0px 0; }
 
 .filter { display: none; }
 
-#ragas {
-  width: 100%;
+#ragas { width: 100%; }
 
-  th {
-    text-align: left;
-    padding-bottom: 5px;
-    font-weight: normal;
+#ragas th {
+  text-align: left;
+  padding-bottom: 5px;
+  font-weight: normal;
+}
+
+#ragas th[data-sort] {
+  cursor:pointer;
+}
+
+#ragas tr.even {
+  background: #EEE;
+}
+
+#ragas td, #ragas th {
+  padding: 6px 10px;
+  height: 24px;
+  vertical-align: middle
+}
+
+#ragas td {
+  font-size: 14px;
+}
+
+#ragas th img {
+  display: none;
+  margin: 4px 0 0 5px;
+  float: left;
+}
+
+#ragas th.sorting-desc img, #ragas th.sorting-asc img {
+  display: block;
+}
+
+#ragas th.sorting-desc img {
+  transform: scaleY(-1);
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  filter: flipv;
+}
+
+#ragas .chakra {
+  display: none;
+
+  img {
+    width: 44px;
   }
+}
 
-  th[data-sort] {
-    cursor:pointer;
+@media screen and (min-width: 640px) {
+  #ragas .chakra {
+    display: table-cell;
   }
+}
 
-  tr.even {
-    background: #EEE;
-  }
+#ragas td.time {
+  font-size: 12px
+}
 
-  td, th {
-    padding: 6px 10px;
-    height: 24px;
-    vertical-align: middle
-  }
+#ragas td.thaat {
+  font-size: 12px
+}
 
-  td {
-    font-size: 14px;
-  }
+#ragas .spotify {
+  display: none;
+}
 
-  th img {
-    display: none;
-    margin: 4px 0 0 5px;
-    float: left;
-  }
-
-  th.sorting-desc img, th.sorting-asc img {
-    display: block;
-  }
-
-  th.sorting-desc img {
-    transform: scaleY(-1);
-    -moz-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    filter: flipv;
-  }
-
-  .chakra {
-    display: none;
-
-    img {
-      width: 44px;
-    }
-
-    @media screen and (min-width: $screen-sm-min) {
-      display: table-cell;
-    }
-  }
-
-  td.time {
-    font-size: 12px
-  }
-
-  td.thaat {
-    font-size: 12px
-  }
-
-  .spotify {
-    display: none;
-
-    @media screen and (min-width: $screen-sm-min) {
-      display: table-cell;
-    }
+@media screen and (min-width: 640px) {
+  #ragas .spotify {
+    display: table-cell;
   }
 }
 
