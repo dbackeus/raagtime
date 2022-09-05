@@ -16,6 +16,8 @@ gem "sitemap_generator"
 gem "stringex" # acts_as_url
 gem "video_info"
 
+gem "kuby-core"
+
 group :development do
   gem "web-console"
 end
