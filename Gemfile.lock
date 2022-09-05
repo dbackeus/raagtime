@@ -77,13 +77,6 @@ GEM
       msgpack (~> 1.2)
     builder (3.2.4)
     byebug (11.1.3)
-    coffee-rails (5.0.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 5.2.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     diff-lcs (1.5.0)
@@ -94,8 +87,6 @@ GEM
       railties (>= 3.2)
     erubi (1.11.0)
     erubis (2.7.0)
-    execjs (2.8.1)
-    ffi (1.15.5)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     globalid (1.0.0)
@@ -109,8 +100,6 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
-    heroku-deflater (0.6.3)
-      rack (>= 1.4.5)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -119,10 +108,6 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     iso8601 (0.9.1)
-    jquery-rails (4.5.0)
-      rails-dom-testing (>= 1, < 3)
-      railties (>= 4.2.0)
-      thor (>= 0.14, < 2.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -158,6 +143,11 @@ GEM
       ast
       ruby-ll (~> 2.1)
     pg (1.4.3)
+    propshaft (0.6.4)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -214,26 +204,9 @@ GEM
       ast
     ruby_parser (3.19.1)
       sexp_processor (~> 4.16)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.4.0)
-      ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     sexp_processor (4.16.1)
     sitemap_generator (6.3.0)
       builder (~> 3.0)
-    sprockets (3.7.2)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
-    sprockets-rails (3.4.2)
-      actionpack (>= 5.2)
-      activesupport (>= 5.2)
-      sprockets (>= 3.0.0)
     stringex (2.8.5)
     strscan (3.0.4)
     temple (0.8.2)
@@ -242,8 +215,6 @@ GEM
     timeout (0.3.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    uglifier (4.2.0)
-      execjs (>= 0.3.0, < 3)
     video_info (3.0.2)
       iso8601 (~> 0.9.1)
       net_http_timeout_errors (~> 0.3.0)
@@ -266,22 +237,17 @@ DEPENDENCIES
   airbrake
   bootsnap
   byebug
-  coffee-rails
   dotenv-rails
   formtastic
   haml-rails
-  heroku-deflater
-  jquery-rails
   newrelic_rpm
   pg
+  propshaft
   puma
   rails
   rspec-rails
-  sass-rails
   sitemap_generator
-  sprockets (~> 3.7.2)
   stringex
-  uglifier
   video_info
   web-console
 
