@@ -1,0 +1,10 @@
+.git
+tmp
+log
+public/assets
+.bundle
+spec
+
+storage
+config/master.key
+config/credentials/*.key
