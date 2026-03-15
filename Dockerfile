@@ -9,7 +9,7 @@ ENV BUNDLE_CLEAN=true
 
 FROM base as gems
 
-RUN apk add build-base postgresql-dev
+RUN apk add build-base postgresql-dev yaml-dev
 
 COPY .ruby-version .
 COPY Gemfile* .
