@@ -1,4 +1,4 @@
-ARG RUBY_VERSION=3.1.2
+ARG RUBY_VERSION=3.4.7
 FROM ruby:${RUBY_VERSION}-alpine as base
 
 WORKDIR /app
@@ -9,7 +9,7 @@ ENV BUNDLE_CLEAN=true
 
 FROM base as gems
 
-RUN apk add build-base postgresql-dev
+RUN apk add build-base postgresql-dev yaml-dev
 
 COPY .ruby-version .
 COPY Gemfile* .
